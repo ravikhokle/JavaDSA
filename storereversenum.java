@@ -2,7 +2,7 @@ import java.util.*;
 
 public class storereversenum{
     public static void main(String args[]){
-        int num=456, lastDigit;
+        int num=123, lastDigit;
         int i, rev=0;
 
         while(num>0){
