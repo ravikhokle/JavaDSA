@@ -1,5 +1,7 @@
 public class SubArrays{
 
+    // Brut Force approach
+
     // public static void printSubArrays(int arr[]){
     //     int ts = 0;
     //     for(int i=0; i<arr.length; i++){
