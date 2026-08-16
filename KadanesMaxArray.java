@@ -5,17 +5,14 @@ public class KadanesMaxArray{
         int sum = 0;
 
         for(int i=0; i<numbers.length; i++){
-            sum = sum + numbers[i];
-            if(sum<0){
-                sum=0;
-            }
+            sum = Math.max(numbers[i], sum + numbers[i]);
             ms = Math.max(sum, ms);
         }
         System.out.print("Max subarray sum is: "+ ms);
     }
 
     public static void main(String args[]){
-        int numbers[] = {-2,-3,4,-1,-2,1,5,-3};
+        int numbers[] = {-2,-3,-1,-2,-1,-5,-3};
         kedance(numbers);
     }
 }
