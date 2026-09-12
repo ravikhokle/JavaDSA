@@ -39,6 +39,33 @@ public class ithBit{
         return n & bitMask;
     }
 
+    public static boolean isPowerOfTwo(int n){
+        return n > 0 && (n & (n - 1)) == 0;
+    }
+
+    public static int countSetBits(int n){
+        int count = 0;
+        while(n>0){
+            if((n&1)!=0){
+                count++;
+            }
+            n = n>>1;
+        }
+        return count;
+    }
+
+    public static int fastExponentiation(int a, int n){
+        int ans=1;
+        while(n>0){
+            if((n&1)!=0){
+                ans = ans * a;
+            }
+            a = a * a;
+            n = n>>1;
+        }
+        return ans;
+    }
+
     public static void main(String args[]){
         System.out.println(getIthBit(4,2));
         System.out.println(setIthBit(10,2));
@@ -46,5 +73,8 @@ public class ithBit{
         System.out.println(UpdateIthBit(10,2,1));
         System.out.println(clearIBit(15,2));
         System.out.println(clearRangeOfBits(10,2,4));
+        System.out.println(isPowerOfTwo(8));
+        System.out.println(countSetBits(15  ));
+        System.out.println(fastExponentiation(5,3));
     }
 }
